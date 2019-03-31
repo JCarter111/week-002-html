@@ -8,11 +8,45 @@
         <title>To Do List - Home</title>
     </head>
     <body>
+        <!-- main body of To Do List webpage -->
+        <!-- Heading -->
        <h1>My To Do List</h1> 
-    </body>
-    </html>
-    <head>
-    </head>
-    <body>
+       <!-- Section to add new task to To Do List -->
+       <section id = "addTaskToList">
+            <!-- form action normally required but not implemented -->
+            <!-- in Week 2 exercise -->
+            <!-- can modify this element - <form action="/action_page.php"> -->
+            <form id = "addNewTaskForm">
+                <!-- text box to input new task -->
+                <input id = "textNewTask" type="text" name="addTask" >
+                <!-- button to submit task -->
+                <input id="addNewTask" type="submit" value="Add">
+            </form>
+        </section>
+        <!-- Section to show how many tasks are left to complete -->
+        <!-- Note: this does not count the tasks yet - more code to be added -->
+        <!-- 2 tasks shown as example -->
+        <section id = "countOutstandingTasks">
+               <p>Things to do: 2</p>
+        </section>
+        <!-- Section to list outstanding tasks with options to add/delete tasks -->
+        <section id = "showOutstandingTasks">
+                <!-- table to show outstanding tasks (no table headers) -->
+                <!-- option to mark an outstanding task as Done 
+                    or to Delete an outstanding task -->
+                <!-- example tasks shown -->
+                <table id = "taskTable">
+                    <tr>
+                        <td>A first task</th>
+                        <td><input id="doneTask1" type="submit" value="Done"></th>
+                        <td><input id="deleteTask1" type="submit" value="Delete"></th> 
+                    </tr>
+                    <tr>
+                        <td>A second task</th>
+                        <td><input id="doneTask2" type="submit" value="Done"></th>
+                        <td><input id="deleteTask2" type="submit" value="Delete"></th> 
+                    </tr>
+                </table> 
+         </section>
     </body>
 </html>
