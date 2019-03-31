@@ -23,4 +23,7 @@ need to be increased if the user adds new tasks in the Add to Task List Section.
 The number of rows in the table will need to be decreased if a user selects the Done or Delete button in the Show Outstanding Tasks section.
 
 Possible problems: we will need to keep making a count of the number of rows in the table as this may vary.  The table will need to update automatically every time a new task is added or a task is delete or marked as one. The table may become very large and there may be problems with displaying the table on the webpage.
+We will need some code with the HTML to count the number of rows required in the table
+as this is not fixed.
+We may need to list the tasks e.g. in alphabetical order, oldest task first etc.
 
