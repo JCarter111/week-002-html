@@ -44,11 +44,23 @@
                         <!-- can modify this element - <form action="/action_page.php"> -->
                         <!-- used Bootstrap inline form class -->
                         <form class = "form-inline" id="addNewTaskForm">
-                        <!-- text box to input new task -->
+                            <!-- accessiblity - screen reader text for form -->
+                            <label class="sr-only" for="addNewTaskForm">
+                                Add a new task to the list
+                            </label>
+                            <!-- text box to input new task -->
                             <input class = "form-control" id="textNewTask" type="text" name="addTask">
+                            <!-- accessibility = screen reader text for text box -->
+                            <label class = "sr-only" for="textNewTask">
+                                Input a new task
+                            </label>
                             <!-- button to submit task -->
                             <!-- Bootstrap button class used -->
                             <input id="addNewTask" class = "btn btn-primary" type="submit" value="Add">
+                            <!-- accessibility = screen reader text for input button -->
+                            <label class = "sr-only" for="addNewTask">
+                                Submit new task
+                            </label>
                         </form>
                     </div>
                 </div>
@@ -65,7 +77,9 @@
                     Things to do:
                 </div>
                 <div id = "noOfTasks" class = "col-8">
-                    <span>2</span>
+                    <span class = "badge-pill badge-primary">2</span>
+                    <!-- accessiblity - screen reader text for badge -->
+                    <span class="sr-only">Tasks outstanding</span>
                 </div>
             </div>
         </div> 
@@ -86,23 +100,39 @@
                 <div class="col-sm-2 buttonCol">
                     <!-- used Bootstrap button outline button class -->
                     <input class = "btn btn-outline-primary" id="doneTask1" type="submit" value="Done">
+                    <!-- accessibility = screen reader text for Done task 1 button -->
+                    <label class = "sr-only" for="doneTask1">
+                        Completed task 1
+                    </label>
                 </div>
                 <div class="col-sm-2 buttonCol">
                     <!-- used Bootstrap button outline button class -->
                     <input class = "btn btn-outline-primary" id="deleteTask1" type="submit" value="Delete">
+                    <!-- accessibility - screen reader text for Delete task 1 button -->
+                    <label class = "sr-only" for="deleteTask1">
+                        Delete task 1
+                    </label>
                 </div>
             </div>
             <div class="row align-items-center evenRow">
                 <div class="col-8 firstCol">A second task</div>
                 <!-- buttons are stacked vertically instead of horizontally
-                     when the screen size is small uainf col-sm-2 -->
+                     when the screen size is small using col-sm-2 -->
                 <div class="col-sm-2 buttonCol">
                     <!-- used Bootstrap button outline button class -->
                     <input class = "btn btn-outline-primary" id="doneTask2" type="submit" value="Done">
+                    <!-- accessibility = screen reader text for Done task 2 button -->
+                    <label class = "sr-only" for="doneTask2">
+                        Completed task 2
+                    </label>
                 </div>
                 <div class="col-sm-2 buttonCol">
                     <!-- used Bootstrap button outline button class -->
                     <input class = "btn btn-outline-primary" id="deleteTask2" type="submit" value="Delete">
+                    <!-- accessibility - screen reader text for Delete task 2 button -->
+                    <label class = "sr-only" for="deleteTask2">
+                        Delete task 2
+                    </label>
                 </div>
             </div>
         </div>

@@ -79,10 +79,12 @@ span {
 /* apply formatting to odd numbered table rows class */
 .oddRow {
     background: lavender;
+    color: #007bff;
   }
 /* apply to even numbered table rows */
 .evenRow {
     background: palegoldenrod;
+    color: #007bff;
  }
 
  /* footer section */
