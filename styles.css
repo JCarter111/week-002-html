@@ -6,7 +6,6 @@ body {
 /* heading 1 */
 h1 {
     color: darkblue;
-    text-align: center;
     font-family: Arial, Helvetica, sans-serif; 
     font-size: 30pt; 
     font-weight: bold;
@@ -14,25 +13,33 @@ h1 {
 }
 /* span */
 span {
+    color: darkblue;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    text-align: left;
 }
-/* divisions */
-div {
-    border: 2px solid darkblue;
+/* divisions with standardDiv class */
+.standardDiv {
+    border-top: 2px solid darkblue;
+    border-bottom: 2px solid darkblue;
     padding: 10px 10px 10px 10px;
-    margin: 2%;
+    margin-bottom: 2%;
     font-family: Arial, Helvetica, sans-serif;
     color: darkblue;
     background:lightskyblue ;
 }
 /* To Do List Heading Section */
 /* toDoListHeading */
-
+/*#toDoListRow {
+    border: 2px solid darkblue;
+    font-family: Arial, Helvetica, sans-serif;
+    background:lightskyblue ;
+    text-align: left;
+} */
 /* apply to image id */
 #imgToDoList {
     border: 2px solid  darkblue; 
-    color: darkblue;
-    width: 40%;
+    width: 100%;
 }
 
 /* use flex columns to format heading */
@@ -41,22 +48,17 @@ div {
 /* not really got the hang of flex! */
 #toDoListHeading {
     display: flex; 
-    flex-direction: row; 
+    flex-direction: row;
+    margin-top: 2%; 
+    margin-bottom: 2%;
 }
 .column1 {
-    /* override the border that is applied to
-    div earlier in the CSS */
-    padding: 0px 0px 0px 0px;
-    border:none;
-    text-align: left; 
-    width: 90%
+    /* align column contents to the left */
+    justify-content: flex-start; 
 }
 .column2 {
-    /* override the border that is applied to
-    div earlier in the CSS */
-    padding: 0px 0px 0px 0px;
-    border:none;
-    text-align: right;
+    /* align column contents to the right */
+    justify-content: flex-end;
 }
 
 
@@ -78,12 +80,10 @@ div {
 #taskTable {
     border: 2px dashed darkblue;
     color:darkblue;
-    margin: 2%
-}
-/* apply formatting to table first column class */
-.firstCol{
-    width:80%;   
-   }
+    margin-top: 2%;
+    margin-bottom: 2%;
+} 
+
 /* apply formatting to odd numbered table rows class */
 .oddRow {
     background: lavender;
@@ -103,7 +103,7 @@ div {
     color:darkblue;
 }
 /* examples of CSS media query */
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     body {
         background-color: green;
     }
@@ -114,4 +114,4 @@ div {
 @media only screen and (max-width:800px) {
     div {background-color:rgba(230,56,160,0.5);
 }
-}
+} */

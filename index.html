@@ -7,74 +7,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To Do List - Home</title>
+    <!-- add link to Bootstrap framework stylesheet -->
+    <link rel="stylesheet" 
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous">
     <!-- link to stylesheet in header -->
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
     <!-- main body of To Do List webpage -->
-    <!-- initially used a table to format heading -->
-    <!-- and picture layout --> 
-    <!-- <div id = "toDoListHeading" > -->
-    <!-- <table> -->
-    <!-- <tr> -->
-    <!-- <th width = 30% ><h1>My To Do List</h1></th> -->
-    <!-- <th width = 30%><img id = "imgToDoList" alt = "To Do List Picture"  -->
-    <!-- src="images/Shopping_List.jpg" width=40%> -->
-    <!-- </th> -->
-    <!-- </tr> -->
-    <!-- </table> -->
-    <!-- Heading -->
-
-    <!-- converted to using divisions and apply -->
-    <!-- stylesheets flex -->
-    <div id="toDoListHeading">
-        <div class="column1"> 
-            <h1>My To Do List</h1>
-        </div>
-        <div class="column2">
-            <img id="imgToDoList" alt="Picture of a To Do List" 
+ 
+    <!-- converted to use Bootstrap framework -->
+    <div id="toDoListHeading" class = "container">
+        <div id="toDoListRow" class = "row">
+            <div class="col-8 column1"> 
+                <h1>My To Do List</h1>
+            </div>
+            <div class="col-4 column2">
+                <img id="imgToDoList" alt="Picture of a To Do List" 
                 src="images/Shopping_List.jpg">
+            </div>
         </div>
     </div>
 
 
     <!-- Section to add new task to To Do List -->
-    <div id="addTaskToList">
+    <div id="addTaskToList" class = "standardDiv">
         <!-- form action normally required but not implemented -->
         <!-- in Week 2 exercise -->
-        <!-- can modify this element - <form action="/action_page.php"> -->
-        <form id="addNewTaskForm">
-            <!-- text box to input new task -->
-            <input id="textNewTask" type="text" name="addTask">
-            <!-- button to submit task -->
-            <input id="addNewTask" type="submit" value="Add">
-        </form>
+        <div id="addTasks" class = "container">
+                <div class="row">
+                    <div class="col-12 firstCol"> 
+                        <!-- can modify this element - <form action="/action_page.php"> -->
+                        <form id="addNewTaskForm">
+                        <!-- text box to input new task -->
+                            <input id="textNewTask" type="text" name="addTask">
+                            <!-- button to submit task -->
+                            <input id="addNewTask" type="submit" value="Add">
+                        </form>
+                    </div>
+                </div>
+        </div>
     </div>
     <!-- Section to show how many tasks are left to complete -->
     <!-- Note: this does not count the tasks yet - more code to be added -->
     <!-- 2 tasks shown as example -->
-    <div id="countOutstandingTasks">
-        <p>Things to do: <span id="noOfTasks">2</span></p>
+    <div id="countOutstandingTasks" class = "standardDiv">
+        <div id="displayOutstandingTasks" class = "container">
+            <div class = "row">
+                <div id="tasksText" class = "col-4">
+                    Things to do:
+                </div>
+                <div id = "noOfTasks" class = "col-8">
+                    <span>2</span>
+                </div>
+            </div>
+        </div> 
+        <!-- <p>Things to do: <span id="noOfTasks">2</span></p> -->
     </div>
     <!-- Section to list outstanding tasks with options to add/delete tasks -->
-    <div id="showOutstandingTasks">
-        <!-- table to show outstanding tasks (no table headers) -->
-        <!-- option to mark an outstanding task as Done 
+    <div id="showOutstandingTasks" class = "standardDiv"> 
+        <!-- use Bootstrap grid model to format task list -->
+        <!-- taskTable option to mark an outstanding task as Done 
                     or to Delete an outstanding task -->
         <!-- example tasks shown -->
-        <table id="taskTable">
-            <tr class="oddRow">
-                <td class="firstCol">A first task</td>
-                <td class="buttonCol"><input id="doneTask1" type="submit" value="Done"></td>
-                <td class="buttonCol"><input id="deleteTask1" type="submit" value="Delete"></td>
-            </tr>
-            <tr class="evenRow">
-                <td class="firstCol">A second task</td>
-                <td class="buttonCol"><input id="doneTask2" type="submit" value="Done"></td>
-                <td class="buttonCol"><input id="deleteTask2" type="submit" value="Delete"></td>
-            </tr>
-        </table>
+        <!-- create taskList container -->
+        <div id="taskTable" class = "container">
+            <div class="row oddRow">
+                <div class="col-8 firstCol">A first task</div>
+                <!--buttons are stacked vertically instead of horizontally
+                     when the screen size is small using col-sm-2 -->
+                <div class="col-sm-2 buttonCol"><input id="doneTask1" type="submit" value="Done"></div>
+                <div class="col-sm-2 buttonCol"><input id="deleteTask1" type="submit" value="Delete"></div>
+            </div>
+            <div class="row evenRow">
+                <div class="col-8 firstCol">A second task</div>
+                <!-- buttons are stacked vertically instead of horizontally
+                     when the screen size is small uainf col-sm-2 -->
+                <div class="col-sm-2 buttonCol"><input id="doneTask2" type="submit" value="Done"></div>
+                <div class="col-sm-2 buttonCol"><input id="deleteTask2" type="submit" value="Delete"></div>
+            </div>
+        </div>
     </div>
     <footer id=toDoListFooter>&copy; Jackie - last update April 2019</footer>
 </body>
