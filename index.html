@@ -13,13 +13,14 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
     crossorigin="anonymous">
     <!-- link to stylesheet in header -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css" /> 
 </head>
 
 <body>
     <!-- main body of To Do List webpage -->
  
     <!-- converted to use Bootstrap framework -->
+    <!-- to align title and picture in columns -->
     <div id="toDoListHeading" class = "container">
         <div id="toDoListRow" class = "row">
             <div class="col-8 column1"> 
@@ -38,14 +39,16 @@
         <!-- form action normally required but not implemented -->
         <!-- in Week 2 exercise -->
         <div id="addTasks" class = "container">
-                <div class="row">
+                <div class="row align-items-left">
                     <div class="col-12 firstCol"> 
                         <!-- can modify this element - <form action="/action_page.php"> -->
-                        <form id="addNewTaskForm">
+                        <!-- used Bootstrap inline form class -->
+                        <form class = "form-inline" id="addNewTaskForm">
                         <!-- text box to input new task -->
-                            <input id="textNewTask" type="text" name="addTask">
+                            <input class = "form-control" id="textNewTask" type="text" name="addTask">
                             <!-- button to submit task -->
-                            <input id="addNewTask" type="submit" value="Add">
+                            <!-- Bootstrap button class used -->
+                            <input id="addNewTask" class = "btn btn-primary" type="submit" value="Add">
                         </form>
                     </div>
                 </div>
@@ -54,6 +57,7 @@
     <!-- Section to show how many tasks are left to complete -->
     <!-- Note: this does not count the tasks yet - more code to be added -->
     <!-- 2 tasks shown as example -->
+    <!-- using Bootstrap framework to setup columns for the text and number of task -->
     <div id="countOutstandingTasks" class = "standardDiv">
         <div id="displayOutstandingTasks" class = "container">
             <div class = "row">
@@ -65,7 +69,6 @@
                 </div>
             </div>
         </div> 
-        <!-- <p>Things to do: <span id="noOfTasks">2</span></p> -->
     </div>
     <!-- Section to list outstanding tasks with options to add/delete tasks -->
     <div id="showOutstandingTasks" class = "standardDiv"> 
@@ -75,19 +78,32 @@
         <!-- example tasks shown -->
         <!-- create taskList container -->
         <div id="taskTable" class = "container">
-            <div class="row oddRow">
+            <!-- centre align items in the rows -->
+            <div class="row align-items-center oddRow">
                 <div class="col-8 firstCol">A first task</div>
                 <!--buttons are stacked vertically instead of horizontally
                      when the screen size is small using col-sm-2 -->
-                <div class="col-sm-2 buttonCol"><input id="doneTask1" type="submit" value="Done"></div>
-                <div class="col-sm-2 buttonCol"><input id="deleteTask1" type="submit" value="Delete"></div>
+                <div class="col-sm-2 buttonCol">
+                    <!-- used Bootstrap button outline button class -->
+                    <input class = "btn btn-outline-primary" id="doneTask1" type="submit" value="Done">
+                </div>
+                <div class="col-sm-2 buttonCol">
+                    <!-- used Bootstrap button outline button class -->
+                    <input class = "btn btn-outline-primary" id="deleteTask1" type="submit" value="Delete">
+                </div>
             </div>
-            <div class="row evenRow">
+            <div class="row align-items-center evenRow">
                 <div class="col-8 firstCol">A second task</div>
                 <!-- buttons are stacked vertically instead of horizontally
                      when the screen size is small uainf col-sm-2 -->
-                <div class="col-sm-2 buttonCol"><input id="doneTask2" type="submit" value="Done"></div>
-                <div class="col-sm-2 buttonCol"><input id="deleteTask2" type="submit" value="Delete"></div>
+                <div class="col-sm-2 buttonCol">
+                    <!-- used Bootstrap button outline button class -->
+                    <input class = "btn btn-outline-primary" id="doneTask2" type="submit" value="Done">
+                </div>
+                <div class="col-sm-2 buttonCol">
+                    <!-- used Bootstrap button outline button class -->
+                    <input class = "btn btn-outline-primary" id="deleteTask2" type="submit" value="Delete">
+                </div>
             </div>
         </div>
     </div>

@@ -29,13 +29,7 @@ span {
     background:lightskyblue ;
 }
 /* To Do List Heading Section */
-/* toDoListHeading */
-/*#toDoListRow {
-    border: 2px solid darkblue;
-    font-family: Arial, Helvetica, sans-serif;
-    background:lightskyblue ;
-    text-align: left;
-} */
+
 /* apply to image id */
 #imgToDoList {
     border: 2px solid  darkblue; 
@@ -47,20 +41,17 @@ span {
 /* help might be required here */
 /* not really got the hang of flex! */
 #toDoListHeading {
-    display: flex; 
-    flex-direction: row;
     margin-top: 2%; 
     margin-bottom: 2%;
 }
 .column1 {
     /* align column contents to the left */
-    justify-content: flex-start; 
+    justify-content: flex-end; 
 }
 .column2 {
     /* align column contents to the right */
     justify-content: flex-end;
 }
-
 
 
 /* Add Task to List Section */
@@ -69,7 +60,9 @@ span {
 /* format form to input new task */
 /* id addNewTaskForm */
 #addNewTaskForm {
-    margin: 2%;
+    /* set top and bottom margins */
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 
@@ -78,7 +71,6 @@ span {
 
 /* apply formatting to taskTable id */
 #taskTable {
-    border: 2px dashed darkblue;
     color:darkblue;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -97,7 +89,7 @@ span {
 #toDoListFooter {
     padding: 20px 20px 20px 20px;
     font-size: small;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     text-align: center;
     color:darkblue;
